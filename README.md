@@ -4,7 +4,7 @@
 
 ```bash
 npm install
-npm run dev
+npm run dev::server
 ```
 
 - Client: Vite dev server (see `client/package.json`)
