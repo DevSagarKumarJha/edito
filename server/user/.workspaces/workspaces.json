@@ -1,0 +1,16 @@
+[
+  {
+    "id": "d4313ff0-4a97-45bd-b07c-3729dbaf97b7",
+    "userId": "50f376b9-c40f-444b-9c6d-c43a2f97770f",
+    "name": "src",
+    "rootPath": "/home/senku/Learn/nodejs/code-editor/server/workspaces/50f376b9-c40f-444b-9c6d-c43a2f97770f/src-d4313f",
+    "createdAt": "2026-04-12T09:01:30.920Z"
+  },
+  {
+    "id": "ce02d7d6-f87d-4fc1-9930-ee5d8ab14084",
+    "userId": "50f376b9-c40f-444b-9c6d-c43a2f97770f",
+    "name": "term",
+    "rootPath": "/home/senku/Learn/nodejs/code-editor/server/workspaces/50f376b9-c40f-444b-9c6d-c43a2f97770f/term-ce02d7",
+    "createdAt": "2026-04-12T09:03:19.377Z"
+  }
+]
