@@ -6,7 +6,6 @@
     "client"
   ],
   "scripts": {
-    "dev": "concurrently -n server,client -c blue,green \"npm -w server run dev\" \"npm -w client run dev\"",
     "dev:server": "npm -w server run dev",
     "dev:client": "npm -w client run dev"
   }
