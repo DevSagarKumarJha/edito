@@ -6,11 +6,12 @@
     "client"
   ],
   "scripts": {
-    "dev": "concurrently -n server,client -c blue,green \"npm -w server run dev\" \"npm -w client run dev\"",
+    "dev": "concurrently -n server,client -c blue,green \"npm --workspace=server run dev\" \"npm --workspace=client run dev\"",
     "dev:server": "npm -w server run dev",
     "dev:client": "npm -w client run dev"
   },
   "devDependencies": {
-    "concurrently": "^9.2.1"
+    "concurrently": "^9.2.1",
+    "typescript": "^6.0.2"
   }
 }
