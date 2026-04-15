@@ -11,9 +11,10 @@
     "allowImportingTsExtensions": true,
     "verbatimModuleSyntax": true,
     "moduleDetection": "force",
+    "composite": true,
     "noEmit": true,
     "jsx": "react-jsx",
     "isolatedModules": true
   },
-  "include": ["src", "../types"]
+  "include": ["src"]
 }

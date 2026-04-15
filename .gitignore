@@ -69,6 +69,10 @@ jspm_packages/
 # Stores VSCode versions used for testing VSCode extensions
 .vscode-test
 
+# Build output
+server/dist/
+types/dist/
+
 # OS generated files
 .DS_Store
 .DS_Store?
@@ -77,5 +81,4 @@ jspm_packages/
 .Trashes
 ehthumbs.db
 Thumbs.db
-package-lock.json
 yarn.lock

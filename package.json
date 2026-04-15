@@ -3,12 +3,18 @@
   "private": true,
   "workspaces": [
     "server",
-    "client"
+    "client",
+    "types"
   ],
   "scripts": {
+    "start": "concurrently -n server,client -c blue,green \"npm --workspace=server run dev\" \"npm --workspace=client run dev\"",
     "dev": "concurrently -n server,client -c blue,green \"npm --workspace=server run dev\" \"npm --workspace=client run dev\"",
     "dev:server": "npm -w server run dev",
-    "dev:client": "npm -w client run dev"
+    "dev:client": "npm -w client run dev",
+    "build": "npm run build:types && concurrently -n server,client -c blue,green \"npm --workspace=server run build\" \"npm --workspace=client run build\"",
+    "build:server": "npm -w server run build",
+    "build:client": "npm -w client run build",
+    "build:types": "npm -w types run build"
   },
   "devDependencies": {
     "concurrently": "^9.2.1",

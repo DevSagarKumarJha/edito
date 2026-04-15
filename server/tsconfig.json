@@ -7,10 +7,12 @@
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
     "types": ["node"],
-    "allowImportingTsExtensions": true,
     "verbatimModuleSyntax": true,
     "moduleDetection": "force",
-    "noEmit": true
+    "outDir": "./dist",
+    "rootDir": ".",
+    "composite": true,
+    "noEmit": false
   },
-  "include": ["src", "index.ts", "../types"]
+  "include": ["src", "index.ts"]
 }

@@ -6,6 +6,11 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
     "erasableSyntaxOnly": true,
-    "noUncheckedSideEffectImports": true
-  }
+    "noUncheckedSideEffectImports": true,
+    "forceConsistentCasingInFileNames": true,
+  },
+  "references": [
+    { "path": "./server" },
+    { "path": "./types" }
+  ]
 }
