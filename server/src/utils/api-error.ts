@@ -1,0 +1,37 @@
+/**
+ *  Standard API Error wrapper
+ * 
+ * @class
+ */
+class ApiError extends Error {
+    statusCode: number;
+    data: null;
+    success: boolean;
+    errors: Error[];
+    /**
+     * @param {number} statusCode
+     * @param {string} message
+     * @param {Array} errors
+     * @param {string} stack
+     */
+    constructor(
+        statusCode: number,
+        message = "Something went wrong",
+        errors = [],
+        stack = "",
+    ) {
+        super(message);
+        this.statusCode = statusCode;
+        this.data = null;
+        this.message = message;
+        this.success = false;
+        this.errors = errors;
+        if (stack) {
+            this.stack = stack;
+        } else {
+            Error.captureStackTrace(this, this.constructor);
+        }
+    }
+}
+
+export { ApiError };

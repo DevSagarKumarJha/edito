@@ -2,17 +2,19 @@
   "extends": "../tsconfig.json",
   "compilerOptions": {
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.server.tsbuildinfo",
-    "target": "ES2023",
+    "target": "es6",
     "lib": ["ES2023"],
-    "module": "NodeNext",
-    "moduleResolution": "NodeNext",
+    "module": "esnext",
+    "moduleResolution": "bundler",
     "types": ["node"],
-    "verbatimModuleSyntax": true,
+    "verbatimModuleSyntax": false,
     "moduleDetection": "force",
-    "outDir": "./dist",
+    "outDir": "dist",
+    "sourceMap": false,
     "rootDir": ".",
     "composite": true,
-    "noEmit": false
+    "noEmit": false,
+    "esModuleInterop": true,
   },
   "include": ["src", "index.ts"]
 }

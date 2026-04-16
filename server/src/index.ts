@@ -1,9 +1,5 @@
-// Test code removed
-import type{Message} from 'types';
+import "dotenv/config";
+import startServer from "./server";
 
-const msg: Message = {
-  text: 'Hello, World!',
-  createdAt: new Date(),
-};
-
-console.log(msg);
+// console.log("Database URL from .env:", process.env.DB_URL);
+startServer();
