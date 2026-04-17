@@ -1,7 +1,7 @@
 // src/middlewares/logger.ts
 import { Request, Response, NextFunction } from "express";
 import crypto from "crypto";
-import { logger } from "../config";
+import { logger } from "../utils/logger";
 import {asyncHandler} from "../utils/asyncHandler";
 
 // asynchandler

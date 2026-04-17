@@ -1,1 +1,6 @@
-export type { startServerConfigProps } from "./server";
+export type {UserRegistrationProps} from "./User";
+
+export type startServerConfigProps = {
+  port: number;
+  db_url: string;
+};

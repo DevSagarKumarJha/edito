@@ -1,8 +1,9 @@
 import express from "express";
 
 import cors from "cors";
-import { healthCheckRouter } from "../routes";
-import { loggingMiddleware } from "../middlewares";
+import healthCheckRouter from "./modules/heathCheck/health.routes";
+import { loggingMiddleware } from "./middlewares";
+
 
 export function createApp() {
   const app = express();

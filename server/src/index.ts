@@ -1,10 +1,15 @@
 import "dotenv/config";
 import startServer from "./server";
 import type { startServerConfigProps } from "types/src";
+const port = Number(process.env.PORT);
+
+if (!process.env.DB_URL) {
+  throw new Error("DB_URL is required");
+}
 
 const config: startServerConfigProps = {
-  port: process.env.PORT ? parseInt(process.env.PORT) : 3000,
-  db_url: process.env.DB_URL || "mongodb://localhost:27017/edito",
+  port: Number.isFinite(port) ? port : 3000,
+  db_url: process.env.DB_URL,
 };
 
 startServer(config);
