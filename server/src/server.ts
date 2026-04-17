@@ -1,15 +1,16 @@
 import http from "http";
 import { createApp } from "./app";
 import { connectDB } from "./db";
+import { startServerConfigProps } from "types/src/";
 
-async function startServer() {
+async function startServer({ port, db_url }: startServerConfigProps) {
   const app = createApp();
   const server = http.createServer(app);
 
-  await connectDB();
+  await connectDB(db_url);
 
-  server.listen(3000, () => {
-    console.log("Server is running on port 3000");
+  server.listen(port, () => {
+    console.log(`[[32mdev[39m] view the server at http://localhost:${port}`);
   });
 }
 

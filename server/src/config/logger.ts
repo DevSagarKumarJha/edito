@@ -1,8 +1,15 @@
+import { format } from "path";
 import winston from "winston";
 
 const { combine, timestamp, errors, json, printf, colorize } = winston.format;
 
 const isDev = process.env.NODE_ENV !== "production";
+
+// custom log TIME format
+
+const localTimeFormat = timestamp({
+  format: () => new Date().toLocaleString(),
+})
 
 // readable format for dev
 const devFormat = printf(({ level, message, timestamp, ...meta }) => {
@@ -15,7 +22,7 @@ export const logger = winston.createLogger({
   level: "info",
   format: combine(
     errors({ stack: true }),
-    timestamp(),
+    localTimeFormat,
     isDev ? combine(colorize(), devFormat) : json(),
   ),
   transports: [

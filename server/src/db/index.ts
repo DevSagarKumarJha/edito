@@ -1,9 +1,7 @@
 import mongoose from "mongoose";
 
-export async function connectDB() {
+export async function connectDB(dbUrl: string) {
   try {
-    const dbUrl = process.env.DB_URL;
-
     if (!dbUrl) {
       throw new Error("Database URL is not defined in environment variables.");
     }
