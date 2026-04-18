@@ -1,6 +1,6 @@
 import "dotenv/config";
 import startServer from "./server";
-import type { startServerConfigProps } from "types/src";
+import type { startServerConfigProps } from "./types";
 const port = Number(process.env.PORT);
 
 if (!process.env.DB_URL) {

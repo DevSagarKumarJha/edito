@@ -1,8 +1,6 @@
-// src/middlewares/logger.ts
 import { Request, Response, NextFunction } from "express";
 import crypto from "crypto";
-import { logger } from "../utils/logger";
-import {asyncHandler} from "../utils/asyncHandler";
+import { logger, asyncHandler } from "../utils";
 
 // asynchandler
 const loggingMiddleware = asyncHandler(async (req: Request, res: Response, next: NextFunction) => {

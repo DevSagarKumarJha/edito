@@ -1,4 +1,3 @@
-import { format } from "path";
 import winston from "winston";
 
 const { combine, timestamp, errors, json, printf, colorize } = winston.format;

@@ -1,7 +1,7 @@
 import http from "http";
 import { createApp } from "./app";
 import { connectDB } from "./db/connect";
-import { startServerConfigProps } from "types/src/";
+import { startServerConfigProps } from "./types";
 
 async function startServer({ port, db_url }: startServerConfigProps) {
   try {
